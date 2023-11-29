@@ -1,0 +1,105 @@
+{
+  "name": "ui",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "Andrey Kondalov",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "tsup": {
+    "dts": true,
+    "format": [
+      "esm"
+    ],
+    "clean": true,
+    "minify": true,
+    "external": [
+      "react",
+      "react-dom"
+    ],
+    "splitting": true,
+    "treeshake": true,
+    "entryPoints": [
+      "src/index.ts"
+    ]
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es2021": true
+    },
+    "extends": [
+      "plugin:react/recommended",
+      "standard-with-typescript",
+      "plugin:import/typescript",
+      "plugin:prettier/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "overrides": [],
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "module",
+      "project": "./tsconfig.json"
+    },
+    "plugins": [
+      "react",
+      "prettier"
+    ],
+    "rules": {
+      "@typescript-eslint/triple-slash-reference": "off"
+    }
+  },
+  "prettier": {
+    "arrowParens": "avoid",
+    "bracketSameLine": true,
+    "singleQuote": true,
+    "jsxSingleQuote": false,
+    "trailingComma": "all",
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": true,
+    "printWidth": 80
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --quiet --fix",
+      "prettier --write --ignore-unknown"
+    ],
+    "*.{json,html}": [
+      "prettier --write --ignore-unknown"
+    ]
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "dev": "ladle serve",
+    "preview": "ladle preview",
+    "build": "npm run build:lib && npm run build:docs",
+    "build:lib": "tsup",
+    "build:docs": "ladle build -o docs",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "prettier": "prettier --write .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@ladle/react": "^4.0.1",
+    "@types/react": "^18.2.39",
+    "@types/react-dom": "^18.2.17",
+    "@typescript-eslint/parser": "^6.13.1",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.1.0",
+    "prettier": "^3.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tsup": "^8.0.1",
+    "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "react": "^18",
+    "react-dom": "^18"
+  }
+}
