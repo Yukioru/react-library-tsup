@@ -1,8 +1,8 @@
 {
-  "name": "ui",
+  "name": "react-library",
   "version": "1.0.0",
-  "description": "",
-  "keywords": [],
+  "description": "Template for creating a React UI library",
+  "keywords": ["react", "template", "library"],
   "author": "Andrey Kondalov",
   "license": "MIT",
   "main": "dist/index.js",
