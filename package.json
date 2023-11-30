@@ -1,5 +1,5 @@
 {
-  "name": "react-library",
+  "name": "@yukioru/react-library",
   "version": "1.0.0",
   "description": "Template for creating a React UI library",
   "keywords": ["react", "template", "library"],
@@ -8,6 +8,9 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
   "tsup": {
     "dts": true,
     "format": [
