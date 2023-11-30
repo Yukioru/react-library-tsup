@@ -1,1 +1,0 @@
-import{j as t}from"./index-xLW9Fdcm.js";function o({children:e,...n}){return t.jsx("button",{className:"button",...n,children:e})}const d=()=>t.jsx(o,{children:"Default"});typeof window<"u"&&window.document&&window.document.createElement&&document.documentElement.setAttribute("data-storyloaded","");export{d as Default};
