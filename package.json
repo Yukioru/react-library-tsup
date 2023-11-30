@@ -2,12 +2,19 @@
   "name": "@yukioru/react-library",
   "version": "1.0.0",
   "description": "Template for creating a React UI library",
-  "keywords": ["react", "template", "library"],
+  "keywords": [
+    "react",
+    "template",
+    "library"
+  ],
   "author": "Andrey Kondalov",
   "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
+  "files": [
+    "dist"
+  ],
   "publishConfig": {
     "access": "public"
   },
