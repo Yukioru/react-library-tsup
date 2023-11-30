@@ -10,8 +10,8 @@
       "levels": [
         "Button"
       ],
-      "locStart": 4,
-      "locEnd": 4,
+      "locStart": 11,
+      "locEnd": 11,
       "filePath": "src/stories/Button.stories.tsx",
       "namedExport": "Default",
       "meta": {}
